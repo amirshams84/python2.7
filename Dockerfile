@@ -1,4 +1,4 @@
-FROM amirshams/centos7:1.0
+FROM amirshams/centos7:latest
 MAINTAINER Amir Shams <amir.shams84@gmail.com>
 
 ##############################################################
