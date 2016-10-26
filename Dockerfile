@@ -15,14 +15,7 @@ ENV PATH=$DEST/$VERSION/bin:$PATH
 ENV PYTHONPATH=$DEST/$VERSION/lib/python2.7
 ENV MANPATH=$DEST/$VERSION/share/man:$MANPATH
 
-RUN yum install -y \
-       bzip2-devel \
-       openssl-devel \
-       readline-devel \
-       sqlite-devel  \
-       tk-devel  \
-       zlib-devel ; \
-    curl -L -o Python-$VERSION.tgz https://www.python.org/ftp/python/$VERSION/Python-$VERSION.tgz ; \
+RUN curl -L -o Python-$VERSION.tgz https://www.python.org/ftp/python/$VERSION/Python-$VERSION.tgz ; \
     tar xvf Python-$VERSION.tgz ; \
     cd Python-$VERSION ; \
     ./configure --prefix=$DEST/$VERSION ; \
